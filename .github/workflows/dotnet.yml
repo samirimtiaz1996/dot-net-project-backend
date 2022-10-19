@@ -17,8 +17,8 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore /workspace/actions-runner/_work/dot-net-project-backend/dot-net-project-backend/TeleMedicine_WebService
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore /workspace/actions-runner/_work/dot-net-project-backend/dot-net-project-backend/TeleMedicine_WebService
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal /workspace/actions-runner/_work/dot-net-project-backend/dot-net-project-backend/TeleMedicine_WebService
