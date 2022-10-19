@@ -12,12 +12,9 @@ jobs:
     runs-on: self-hosted
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
+   
     - name: Restore dependencies
-      run: cd /workspace/actions-runner/_work/dot-net-project-backend/dot-net-project-backend/TeleMedicine_WebService/ && dotnet restore 
+      run: dotnet restore 
     - name: Build
       run: dotnet build --no-restore 
     - name: Test
