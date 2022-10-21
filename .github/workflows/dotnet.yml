@@ -9,13 +9,12 @@ on:
 jobs:
   build:
 
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
+
+    - name: Clean up
+      run: dotnet clean
     - name: Restore dependencies
       run: sudo dotnet restore 
     - name: Build
@@ -24,3 +23,7 @@ jobs:
       run: sudo dotnet test --no-build --verbosity normal 
     - name: Publish
       run: sudo dotnet publish
+    - name: dotnet watch run
+      run: sudo dotnet watch --project=/workspace/actions-runner/work/dot-net-project-backend/dot-net-project-backend/TeleMedicine_WebService
+    - name : dotnet watch stop
+      run: kill -2 $(pgrep dotnet)
