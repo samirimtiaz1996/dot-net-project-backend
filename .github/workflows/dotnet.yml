@@ -22,6 +22,6 @@ jobs:
     - name: Publish
       run: sudo dotnet publish
     - name: dotnet watch run
-      run: sudo dotnet watch
+      run: sudo dotnet watch --project=/workspace/actions-runner/work/dot-net-project-backend/dot-net-project-backend/TeleMedicine_WebService
     - name : dotnet watch stop
       run: kill -2 $(pgrep dotnet)
