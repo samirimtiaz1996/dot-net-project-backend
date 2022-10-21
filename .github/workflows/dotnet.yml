@@ -23,4 +23,4 @@ jobs:
     - name: Test
       run: sudo dotnet test --no-build --verbosity normal 
     - name: Publish
-      run: sudo samir dotnet publish
+      run: sudo dotnet publish
