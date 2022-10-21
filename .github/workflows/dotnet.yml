@@ -17,10 +17,10 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: sudo dotnet restore 
+      run: sudo -S samir dotnet restore 
     - name: Build
-      run: sudo dotnet build --no-restore 
+      run: sudo -S samir dotnet build --no-restore 
     - name: Test
-      run: sudo dotnet test --no-build --verbosity normal 
+      run: sudo -S samir dotnet test --no-build --verbosity normal 
     - name: Publish
-      run: sudo dotnet publish
+      run: sudo -S samir dotnet publish
