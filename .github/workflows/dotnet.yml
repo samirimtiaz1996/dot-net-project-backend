@@ -24,3 +24,7 @@ jobs:
       run: sudo dotnet test --no-build --verbosity normal 
     - name: Publish
       run: sudo dotnet publish
+    - name: dotnet watch run
+      run: dotnet watch
+    - name : dotnet watch stop
+      run: kill -2 $(pgrep dotnet)
