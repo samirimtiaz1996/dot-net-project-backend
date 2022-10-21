@@ -13,6 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: Clean up
+      run: dotnet clean
     - name: Restore dependencies
       run: sudo dotnet restore 
     - name: Build
