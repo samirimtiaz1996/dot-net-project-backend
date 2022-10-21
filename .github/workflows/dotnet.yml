@@ -25,6 +25,6 @@ jobs:
     - name: Publish
       run: sudo dotnet publish
     - name: dotnet watch run
-      run: dotnet watch
+      run: sudo dotnet watch
     - name : dotnet watch stop
       run: kill -2 $(pgrep dotnet)
