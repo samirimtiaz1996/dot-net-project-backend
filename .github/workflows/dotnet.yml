@@ -23,4 +23,5 @@ jobs:
       run: sudo dotnet publish
     - name : dotnet watch stop
       run: sudo kill -2 $(pgrep dotnet)
+    - name: dotnet TeleMedicine Service Stop
       run: sudo kill -2 $(pgrep TeleMedicine)
