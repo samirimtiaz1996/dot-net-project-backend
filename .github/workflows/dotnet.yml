@@ -13,15 +13,15 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Restore dependencies
-      run: sudo dotnet restore 
-    - name: Build
-      run: sudo dotnet build --no-restore 
-    - name: Test
-      run: sudo dotnet test --no-build --verbosity normal 
-    - name: Publish
-      run: sudo dotnet publish
-    - name: dotnet watch run
-      run: sudo dotnet watch --project=/workspace/actions-runner/work/dot-net-project-backend/dot-net-project-backend/TeleMedicine_WebService
-    - name : dotnet watch stop
-      run: kill -2 $(pgrep dotnet)
+#    - name: Restore dependencies
+#      run: sudo dotnet restore 
+#    - name: Build
+#      run: sudo dotnet build --no-restore 
+#    - name: Test
+#      run: sudo dotnet test --no-build --verbosity normal 
+#    - name: Publish
+#      run: sudo dotnet publish
+#    - name : dotnet watch stop
+#      run: sudo kill -2 $(pgrep dotnet)
+#    - name: dotnet TeleMedicine Service Stop
+#      run: sudo kill -2 $(pgrep TeleMedicine)
